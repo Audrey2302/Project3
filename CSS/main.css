@@ -63,24 +63,35 @@ header img {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
-}
-.fonctionnement ol {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   gap: 20px;
+  margin-bottom: 40px;
 }
-.fonctionnement li {
-  padding: 20px;
+.fonctionnement_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 5px;
+}
+.fonctionnement_list p {
+  padding: 3px 7px 2px 7px; /*haut droite bas gauche*/
+  border-radius: 50px;
+  background-color: #9356dc;
+  color: white;
+  position: absolute;
+  left: 1em;
+}
+.fonctionnement_list_body {
+  padding: 20px 30px;
   background-color: #eaeaea;
   border-radius: 20px;
-  width: 70%;
+  width: 90%;
   box-shadow: 6px 5px 6px lightgray;
 }
-.fonctionnement li i {
+.fonctionnement_list_body i {
   color: #9356dc;
 }
-.fonctionnement li span {
+.fonctionnement_list_body span {
   padding-left: 20px;
   font-weight: bold;
 }
@@ -111,11 +122,15 @@ header img {
   box-shadow: 6px 5px 6px lightgray;
   height: 250px; /*Espace d'une card avec la gap de 20px*/
 }
+.restaurants_list .restaurants_card .card_image {
+  position: relative;
+}
 .restaurants_list .restaurants_card .card_image_new {
-  padding: 3px;
+  padding: 5px;
   background-color: #99e2d0;
   position: absolute;
-  right: 75px;
+  right: 5%;
+  top: 5%;
 }
 .restaurants_list .restaurants_card .card_image img {
   width: 100%;
