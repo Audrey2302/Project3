@@ -15,8 +15,7 @@ header .top {
 header .image img{
     width: 100%;
     height: 300px;
-    object-fit: cover;
-    
+    object-fit: cover;    
 
 }
 
@@ -27,15 +26,25 @@ header .image img{
     /*width: 100%; */
    /* margin-top: -40px; */
    
-    background-color: gray;
-    border-radius: 35px 35px 0px 0px;
+    background-color: #f6f6f6;
+    margin-top: -40px;
+    padding-bottom: 30px;
+    
+    
 
     &_top {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 0px 17px;
+        border-radius: 40px 40px 0 0;
+        background-color: #f6f6f6;
+        position: relative; /*Mettre le texte au dessus de la photo*/
+        margin-bottom: 30px;
+        h1, i {
+            margin: 20px 20px;
+        }
     }
+
     &_menu {
         margin: 0px 20px;
     }
@@ -58,6 +67,25 @@ header .image img{
             /*overflow: hidden; */
             /*gap: 20px; mettre des gap dans le display flex */
             gap: 10px;
+            box-shadow: 5px 5px 10px #e7e7e7;
+            }
+
+            &_body {
+                width: 55%;
+                margin-left: 10px;
+                h3, p {
+                    margin: 10px 10px; 
+                    width: 95%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+
+            &_price {
+                h3{
+                    margin: 10px 0px 0px 10px;
+                }
             }
         }
     
@@ -81,6 +109,19 @@ header .image img{
             /*overflow: hidden; */
             /*gap: 20px; mettre des gap dans le display flex */
             gap: 10px;
+            box-shadow: 5px 5px 10px #e7e7e7;
+            }
+
+            &_body {
+                width: 55%;
+                margin-left: 10px;
+                h3, p {
+                    margin: 10px 10px; 
+                    width: 95%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
             }
         }
 
@@ -105,7 +146,22 @@ header .image img{
             /*overflow: hidden; */
             /*gap: 20px; mettre des gap dans le display flex */
             gap: 10px;
+            box-shadow: 5px 5px 10px #e7e7e7;
             }
+
+            &_body {
+                width: 55%;
+                margin-left: 10px;
+
+                h3, p {
+                  margin: 10px 10px; 
+                  width: 95%;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+            }
+
         }
 
     }
@@ -114,6 +170,7 @@ header .image img{
         
         align-items: center;
         margin: auto;
+        width: 200px;
         
     }
 }
