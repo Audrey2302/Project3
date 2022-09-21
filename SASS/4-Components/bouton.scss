@@ -7,12 +7,17 @@ button {
     padding: 15px 20px 15px 20px;
     border-radius: 20px;
     background: linear-gradient(#ff79da, #9356dc);
-    box-shadow: 0 0 7px #7a7a7a;;
+    box-shadow: 0px 0px 7px #7a7a7a;
     cursor: pointer;
-    
-    span {
-        color: white;
+    color: white;
 
+    &:hover {    /*Au survol la couleur s'éclaicie (brightness?) et Ombre plus visible ! */
         
+        box-shadow: 2px 2px 7px green;
+    
+
     }
+    
+    
 }
+

@@ -115,7 +115,7 @@ a {
   flex-direction: column;
   width: 100%;
   padding: 10px 20px;
-  background-color: rgb(230, 229, 229);
+  background-color: #f6f6f6;
 }
 .restaurants_list {
   display: flex;
@@ -169,6 +169,21 @@ a {
   margin: 5px 0px;
 }
 
+/*Version Desktop*/
+@media screen and (min-width: 1000px) {
+  .restaurants_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  .restaurants_list .restaurants_card {
+    width: 45%;
+  }
+}
+/* Mettre un loading spinner au demmarage de la page d'accueil ! */
+/* Est ce que je dois créer une div avec un loader sur mon html, ou mettre un loader sur mon html */
 button {
   display: flex;
   justify-content: center;
@@ -177,11 +192,12 @@ button {
   padding: 15px 20px 15px 20px;
   border-radius: 20px;
   background: linear-gradient(#ff79da, #9356dc);
-  box-shadow: 0 0 7px #7a7a7a;
+  box-shadow: 0px 0px 7px #7a7a7a;
   cursor: pointer;
-}
-button span {
   color: white;
+}
+button:hover { /*Au survol la couleur s'éclaicie (brightness?) et Ombre plus visible ! */
+  box-shadow: 2px 2px 7px green;
 }
 
 footer {
@@ -521,7 +537,7 @@ header .top {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  margin: 20px 0px;
+  margin: 18px 10px;
 }
 header .top img {
   padding: 0px 50px; /*Mettre image au milieude la page*/
@@ -535,11 +551,6 @@ header .image img {
 }
 
 .list {
-  /*display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  /*width: 100%; */
-  /* margin-top: -40px; */
   background-color: #f6f6f6;
   margin-top: -40px;
   padding-bottom: 30px;

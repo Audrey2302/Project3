@@ -96,7 +96,7 @@
     flex-direction: column;
     width: 100%;
     padding: 10px 20px;
-    background-color: rgb(230, 229, 229);
+    background-color: #f6f6f6;
     
 
     &_list {
@@ -163,3 +163,29 @@
     }
     
 }
+
+/*Version Desktop*/
+
+@media screen and (min-width: 1000px) {
+
+
+
+    .restaurants_list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+
+        .restaurants_card {
+            width: 45%;
+        
+       }
+    }
+}
+
+
+
+/* Mettre un loading spinner au demmarage de la page d'accueil ! */
+
+/* Est ce que je dois créer une div avec un loader sur mon html, ou mettre un loader sur mon html */

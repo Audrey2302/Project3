@@ -3,7 +3,7 @@ header .top {
     align-items: center;
     justify-content:flex-start ;
     width: 100%;
-    margin: 20px 0px;
+    margin: 18px 10px;
 
     img {
         padding: 0px 50px; /*Mettre image au milieude la page*/
@@ -19,19 +19,11 @@ header .image img{
 
 }
 
-.list {
-    /*display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /*width: 100%; */
-   /* margin-top: -40px; */
-   
+.list {  
     background-color: #f6f6f6;
     margin-top: -40px;
     padding-bottom: 30px;
     
-    
-
     &_top {
         display: flex;
         align-items: center;
@@ -174,3 +166,4 @@ header .image img{
         
     }
 }
+
