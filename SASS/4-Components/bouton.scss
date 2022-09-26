@@ -13,8 +13,9 @@ button {
 
     &:hover {    /*Au survol la couleur s'éclaicie (brightness?) et Ombre plus visible ! */
         
-        box-shadow: 2px 2px 7px green;
-    
+        box-shadow: 2px 2px 7px #7a7a7a;
+        filter: brightness(1.05);
+        transition: box-shadow  0.3s ease-in-out;
 
     }
     
