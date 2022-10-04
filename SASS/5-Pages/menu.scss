@@ -38,120 +38,228 @@ header .image img{
     }
 
     &_menu {
+
         margin: 0px 20px;
+
+        h2 {  
+            font-size: 18px;
+            font-weight: 200;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+
+        }
+        .underline {
+            background-color: $color_tertiary;
+            width: 45px;
+            height: 3px;
+            margin-bottom: 5px;
+        }
     }
 
     .entrée {
         
+        margin-bottom: 38px;
 
         &_plat {
             display: flex;
+            height: 100%;
             flex-direction: column;
             gap: 20px;
-        
-        
+
             a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: white;
-            border-radius: 20px;
-            /*overflow: hidden; */
-            /*gap: 20px; mettre des gap dans le display flex */
-            gap: 10px;
-            box-shadow: 5px 5px 10px #e7e7e7;
-            }
+                display: flex;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                border-radius: 20px;
+                /*overflow: hidden; */
+                /*gap: 20px; mettre des gap dans le display flex */
+                gap: 10px;
+                box-shadow: 5px 5px 10px #e7e7e7;
 
-            &_body {
-                width: 55%;
-                margin-left: 10px;
-                h3, p {
-                    margin: 10px 10px; 
-                    width: 95%;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
+                &:hover  {
+                    .entrée_plat_slide{
+                        background-color: $color_tertiary;
+                        border-radius: 0px 20px 20px 0px;
+                        color: white;
+                        animation: slide 0.8s both;
+                    }
+                    i{
+                        transform: rotate(360deg);
+                        transition: transform 1s ease;
+                        
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                    .entrée_plat_price {
+                        animation: move 0.8s both;
+                    }
                 }
-            }
 
-            &_price {
-                h3{
-                    margin: 10px 0px 0px 10px;
+                .entrée_plat_body {
+                    width: 55%;
+                    margin-left: 10px;
+                    h3, p {
+                        margin: 10px 10px; 
+                        width: 95%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
                 }
+    
+                .entrée_plat_price {
+                    h3{
+                        margin: 10px 0px 0px 10px;
+                    }
+                }
+                .entrée_plat_slide {
+                    display: grid;
+                    color: transparent;
+                    align-items: center;
+                    height: 10vh;
+                    width: 10vh; }
+                    
+
             }
         }
     
     }
 
     .plats {
-            
 
+        margin-bottom: 38px;
         &_menu {
             display: flex;
+            height: 100%;
             flex-direction: column;
             gap: 20px;
         
         
             a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: white;
-            border-radius: 20px;
-            /*overflow: hidden; */
-            /*gap: 20px; mettre des gap dans le display flex */
-            gap: 10px;
-            box-shadow: 5px 5px 10px #e7e7e7;
-            }
+                display: flex;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                border-radius: 20px;
+                /*overflow: hidden; */
+                /*gap: 20px; mettre des gap dans le display flex */
+                gap: 10px;
+                box-shadow: 5px 5px 10px #e7e7e7;
 
-            &_body {
-                width: 55%;
-                margin-left: 10px;
-                h3, p {
-                    margin: 10px 10px; 
-                    width: 95%;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
+                &:hover  {
+                    .plats_menu_slide{
+                        background-color: $color_tertiary;
+                        border-radius: 0px 20px 20px 0px;
+                        color: white;
+                        animation: slide 0.5s ease;
+                    }
+                    i{
+                        transform: rotate(360deg);
+                        transition: transform 0.5s ease;
+                        
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                    .plats_menu_price{
+                        animation: move 0.8s both;
+                    }
                 }
+
+                .plats_menu_body {
+                    width: 55%;
+                    margin-left: 10px;
+                    h3, p {
+                        margin: 10px 10px; 
+                        width: 95%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+    
+                .plats_menu_price {
+                    h3{
+                        margin: 10px 0px 0px 10px;
+                    }
+                }
+                .plats_menu_slide {
+                    display: grid;
+                    color: transparent;
+                    align-items: center;
+                    height: 10vh;
+                    width: 10vh; }
             }
         }
-
     }
 
     .desserts {
+
+        margin-bottom: 38px;
             
 
         &_menu {
             display: flex;
+            height: 100%;
             flex-direction: column;
             gap: 20px;
-            margin-bottom: 20px;
-        
         
             a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: white;
-            border-radius: 20px;
-            /*overflow: hidden; */
-            /*gap: 20px; mettre des gap dans le display flex */
-            gap: 10px;
-            box-shadow: 5px 5px 10px #e7e7e7;
-            }
+                display: flex;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                border-radius: 20px;
+                /*overflow: hidden; */
+                /*gap: 20px; mettre des gap dans le display flex */
+                gap: 10px;
+                box-shadow: 5px 5px 10px #e7e7e7;
 
-            &_body {
-                width: 55%;
-                margin-left: 10px;
-
-                h3, p {
-                  margin: 10px 10px; 
-                  width: 95%;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  white-space: nowrap;
+                &:hover  {
+                    .desserts_menu_slide{
+                        background-color: $color_tertiary;
+                        border-radius: 0px 20px 20px 0px;
+                        color: white;
+                        animation: slide 0.5s ease;
+                    }
+                    i{
+                        transform: rotate(360deg);
+                        transition: transform 0.5s ease;
+                        
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                    .desserts_menu_price{
+                        animation: move 0.8s both;
+                    }
                 }
+
+                .desserts_menu_body {
+                    width: 55%;
+                    margin-left: 10px;
+                    h3, p {
+                        margin: 10px 10px; 
+                        width: 95%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+    
+                .desserts_menu_price {
+                    h3{
+                        margin: 10px 0px 0px 10px;
+                    }
+                }
+                .desserts_menu_slide {
+                    display: grid;
+                    color: transparent;
+                    align-items: center;
+                    height: 10vh;
+                    width: 10vh; }
             }
 
         }
@@ -166,4 +274,99 @@ header .image img{
         
     }
 }
+@keyframes move {
+    0% {
+        transform: translateX(0);
+        transform: translateX(0);
+      }
+    100% {
+        transform: translateX(-50px);
+        transform: translateX(-50px);
+    }
+}
+@keyframes slide{
+    0% {
+        width: 0vh;
+    }
+    100% {
+        width: 9vh;
+    }
+}
+                 /*Apparition petit a petit de la page*/
 
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+        
+    }
+}
+.one{
+    animation: apparition 1s forwards;
+
+}
+.two {
+    animation: apparition 1.4s forwards;
+}
+.three {
+    animation: apparition 1.8s forwards;
+}
+.four {
+    animation: apparition 2.2s forwards;
+
+}
+.five{
+    animation: apparition 2.6s forwards;
+
+}
+.six{
+    animation: apparition 3s forwards;
+
+}
+.seven{
+    animation: apparition 3.4s forwards;
+}
+.eight{
+    animation: apparition 3.8s forwards;
+}
+.nine{
+    animation: apparition 4.2s forwards;
+}
+.ten {
+    animation: apparition 4.6s forwards;
+}
+
+/*Version Desktop*/
+
+/*@media screen and (min-width: 1295px) {
+
+    .list_menu{
+        display: flex;
+        flex-direction: column;
+        /*flex-wrap: nowrap;*/
+        /*align-items: center;
+        justify-content: space-between;
+    }
+    .entrée{
+       /* width: 32%;*/
+      /* display: flex;
+       flex-direction: row;
+       gap: 10%;
+
+    }
+    .plats {
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+        
+    }
+    .desserts {
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+    }
+}*/

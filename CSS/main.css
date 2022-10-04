@@ -48,6 +48,7 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
+  gap: 5px;
 }
 .search_formulaire input {
   background-color: transparent;
@@ -121,7 +122,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 40px;
 }
 .restaurants_list h2 {
@@ -130,7 +131,7 @@ a {
 .restaurants_list .restaurants_card {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 80%;
   background-color: white;
   border-radius: 15px;
   box-shadow: 6px 5px 6px lightgray;
@@ -169,40 +170,18 @@ a {
   margin: 5px 0px;
 }
 
-/*Version Desktop*/
-@media screen and (min-width: 1000px) {
-  .restaurants_list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-  }
-  .restaurants_list .restaurants_card {
-    width: 45%;
-  }
-}
 /* Mettre un loading spinner au demmarage de la page d'accueil ! */
-/*.loading_spinner {
-    background-color: rgba(255, 255, 255, 0.8);
-    opacity: 0.98;
-
-    position: fixed; /*Et fixé sur le texte*/
-/* width: 100%;
-    height: 100%;
-    margin: 0; 
-
-} */
 .loading_spinner {
   position: fixed; /*Fixé sur le texte*/
   display: flex;
   justify-content: center;
   align-items: center;
-  inset: 0;
+  /*inset: 1; */
   background-color: white;
   opacity: 0.9;
   z-index: 1;
-  transition-delay: 2s; /*Comment faire pour cachez la div au bout de quelque seconde*/
+  animation: opacity 3s forwards;
+  /*Comment faire pour cachez la div au bout de quelque seconde*/
 }
 
 .loading_spinner i {
@@ -223,17 +202,60 @@ a {
   }
 }
 @keyframes opacity {
+  0% {
+    opacity: 1;
+    inset: 0;
+  }
   89% {
     opacity: 1;
+    inset: 0;
   }
   90% {
     opacity: 0.5;
+    inset: 0;
+  }
+  99% {
+    inset: 0;
   }
   100% {
     opacity: 0;
   }
 }
-/* Est ce que je dois créer une div avec un loader sur mon html, ou mettre un loader sur mon html */
+/*Coeur qui se remplie */
+.card_body_icon .fa-regular {
+  position: relative;
+  font-size: 20px;
+}
+.card_body_icon .fa-solid {
+  position: absolute;
+  font-size: 20px;
+  right: 7.5%;
+  color: transparent;
+}
+.card_body_icon .fa-solid:hover {
+  transform: scale(1);
+  color: #9356dc;
+  transform-origin: bottom;
+  transition: all 1s ease-in-out;
+}
+
+/*Version Desktop*/
+@media screen and (min-width: 1200px) {
+  .restaurants_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  .restaurants_list .restaurants_card {
+    width: 45%;
+  }
+  .card_body_icon .fa-solid {
+    position: relative;
+    right: 55%;
+  }
+}
 button {
   display: flex;
   justify-content: center;
@@ -622,13 +644,30 @@ header .image img {
 .list_menu {
   margin: 0px 20px;
 }
+.list_menu h2 {
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+.list_menu .underline {
+  background-color: #99e2d0;
+  width: 45px;
+  height: 3px;
+  margin-bottom: 5px;
+}
+.list .entrée {
+  margin-bottom: 38px;
+}
 .list .entrée_plat {
   display: flex;
+  height: 100%;
   flex-direction: column;
   gap: 20px;
 }
 .list .entrée_plat a {
   display: flex;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: white;
@@ -638,27 +677,54 @@ header .image img {
   gap: 10px;
   box-shadow: 5px 5px 10px #e7e7e7;
 }
-.list .entrée_plat_body {
+.list .entrée_plat a:hover .entrée_plat_slide {
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+  color: white;
+  animation: slide 0.8s both;
+}
+.list .entrée_plat a:hover i {
+  transform: rotate(360deg);
+  transition: transform 1s ease;
+  font-size: 20px;
+  text-align: center;
+}
+.list .entrée_plat a:hover .entrée_plat_price {
+  animation: move 0.8s both;
+}
+.list .entrée_plat a .entrée_plat_body {
   width: 55%;
   margin-left: 10px;
 }
-.list .entrée_plat_body h3, .list .entrée_plat_body p {
+.list .entrée_plat a .entrée_plat_body h3, .list .entrée_plat a .entrée_plat_body p {
   margin: 10px 10px;
   width: 95%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.list .entrée_plat_price h3 {
+.list .entrée_plat a .entrée_plat_price h3 {
   margin: 10px 0px 0px 10px;
+}
+.list .entrée_plat a .entrée_plat_slide {
+  display: grid;
+  color: transparent;
+  align-items: center;
+  height: 10vh;
+  width: 10vh;
+}
+.list .plats {
+  margin-bottom: 38px;
 }
 .list .plats_menu {
   display: flex;
+  height: 100%;
   flex-direction: column;
   gap: 20px;
 }
 .list .plats_menu a {
   display: flex;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: white;
@@ -668,25 +734,54 @@ header .image img {
   gap: 10px;
   box-shadow: 5px 5px 10px #e7e7e7;
 }
-.list .plats_menu_body {
+.list .plats_menu a:hover .plats_menu_slide {
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+  color: white;
+  animation: slide 0.5s ease;
+}
+.list .plats_menu a:hover i {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+  font-size: 20px;
+  text-align: center;
+}
+.list .plats_menu a:hover .plats_menu_price {
+  animation: move 0.8s both;
+}
+.list .plats_menu a .plats_menu_body {
   width: 55%;
   margin-left: 10px;
 }
-.list .plats_menu_body h3, .list .plats_menu_body p {
+.list .plats_menu a .plats_menu_body h3, .list .plats_menu a .plats_menu_body p {
   margin: 10px 10px;
   width: 95%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.list .plats_menu a .plats_menu_price h3 {
+  margin: 10px 0px 0px 10px;
+}
+.list .plats_menu a .plats_menu_slide {
+  display: grid;
+  color: transparent;
+  align-items: center;
+  height: 10vh;
+  width: 10vh;
+}
+.list .desserts {
+  margin-bottom: 38px;
 }
 .list .desserts_menu {
   display: flex;
+  height: 100%;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 20px;
 }
 .list .desserts_menu a {
   display: flex;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: white;
@@ -696,21 +791,143 @@ header .image img {
   gap: 10px;
   box-shadow: 5px 5px 10px #e7e7e7;
 }
-.list .desserts_menu_body {
+.list .desserts_menu a:hover .desserts_menu_slide {
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+  color: white;
+  animation: slide 0.5s ease;
+}
+.list .desserts_menu a:hover i {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+  font-size: 20px;
+  text-align: center;
+}
+.list .desserts_menu a:hover .desserts_menu_price {
+  animation: move 0.8s both;
+}
+.list .desserts_menu a .desserts_menu_body {
   width: 55%;
   margin-left: 10px;
 }
-.list .desserts_menu_body h3, .list .desserts_menu_body p {
+.list .desserts_menu a .desserts_menu_body h3, .list .desserts_menu a .desserts_menu_body p {
   margin: 10px 10px;
   width: 95%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.list .desserts_menu a .desserts_menu_price h3 {
+  margin: 10px 0px 0px 10px;
+}
+.list .desserts_menu a .desserts_menu_slide {
+  display: grid;
+  color: transparent;
+  align-items: center;
+  height: 10vh;
+  width: 10vh;
 }
 .list button {
   align-items: center;
   margin: auto;
   width: 200px;
 }
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+}
+@keyframes slide {
+  0% {
+    width: 0vh;
+  }
+  100% {
+    width: 9vh;
+  }
+}
+/*Apparition petit a petit de la page*/
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.one {
+  animation: apparition 1s forwards;
+}
+
+.two {
+  animation: apparition 1.4s forwards;
+}
+
+.three {
+  animation: apparition 1.8s forwards;
+}
+
+.four {
+  animation: apparition 2.2s forwards;
+}
+
+.five {
+  animation: apparition 2.6s forwards;
+}
+
+.six {
+  animation: apparition 3s forwards;
+}
+
+.seven {
+  animation: apparition 3.4s forwards;
+}
+
+.eight {
+  animation: apparition 3.8s forwards;
+}
+
+.nine {
+  animation: apparition 4.2s forwards;
+}
+
+.ten {
+  animation: apparition 4.6s forwards;
+}
+
+/*Version Desktop*/
+/*@media screen and (min-width: 1295px) {
+
+    .list_menu{
+        display: flex;
+        flex-direction: column;
+        /*flex-wrap: nowrap;*/
+/*align-items: center;
+    justify-content: space-between;
+}
+.entrée{
+   /* width: 32%;*/
+/* display: flex;
+       flex-direction: row;
+       gap: 10%;
+
+    }
+    .plats {
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+
+    }
+    .desserts {
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+    }
+}*/
 
 /*# sourceMappingURL=main.css.map */

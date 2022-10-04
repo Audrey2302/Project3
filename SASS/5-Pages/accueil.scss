@@ -17,6 +17,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        gap: 5px;
 
         input {
             background-color: transparent;
@@ -103,7 +104,7 @@
         display: flex;
         flex-direction: column;
         align-items:center ;
-        gap: 20px;
+        gap: 25px;
         margin-bottom: 40px;
 
         h2 {
@@ -113,7 +114,7 @@
         .restaurants_card {
             display: flex;
             flex-direction: column;
-            width: 90%;
+            width: 80%;
             background-color: white;
             border-radius: 15px;
             box-shadow: 6px 5px 6px lightgray;
@@ -164,51 +165,21 @@
     
 }
 
-/*Version Desktop*/
-
-@media screen and (min-width: 1000px) {
-
-    .restaurants_list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-around;
-
-        .restaurants_card {
-            width: 45%;
-        
-       }
-    }
-}
-
-
 
 /* Mettre un loading spinner au demmarage de la page d'accueil ! */
 
-
-/*.loading_spinner {
-    background-color: rgba(255, 255, 255, 0.8);
-    opacity: 0.98;
-    
-    position: fixed; /*Et fixé sur le texte*/
-   /* width: 100%;
-    height: 100%;
-    margin: 0; 
-    
-} */
 
 .loading_spinner {
     position: fixed; /*Fixé sur le texte*/
     display: flex;
     justify-content: center;
     align-items: center;
-    inset: 0;
+    /*inset: 1; */
     background-color: white;
     opacity: 0.9;
     z-index: 1;
-    transition-delay: 2s; /*Comment faire pour cachez la div au bout de quelque seconde*/
-    
+    animation: opacity 3s forwards;
+     /*Comment faire pour cachez la div au bout de quelque seconde*/
 }
 
 .loading_spinner i {
@@ -226,23 +197,80 @@
         color: $color_secondary;
     }
     to {
-        transform: rotate(360deg);
-        
+        transform: rotate(360deg);   
     }
 }
 @keyframes opacity {
+    0% {
+        opacity: 1;
+        inset: 0;
+    }
     89% {
         opacity: 1;
+        inset: 0;
     }
     90% {
         opacity: 0.5;
+        inset: 0;
+    }
+    99% {
+        
+        inset: 0;
     }
     100% {
         opacity: 0;
+    }  
+}
+
+/*Coeur qui se remplie */
+
+.card_body_icon {
+    .fa-regular {
+        position: relative;
+        font-size: 20px;
+    }
+
+    .fa-solid {
+        position: absolute;
+        font-size: 20px;
+        right: 7.5%;
+        color: transparent;
+        
+        &:hover{
+            transform: scale(1);
+            color: $color_primary;
+            transform-origin: bottom;
+            transition: all 1s ease-in-out;
+        }
     }
     
 }
 
+/*Version Desktop*/
 
+@media screen and (min-width: 1200px) {
 
-/* Est ce que je dois créer une div avec un loader sur mon html, ou mettre un loader sur mon html */
+    .restaurants_list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+
+        .restaurants_card {
+            width: 45%;
+       }
+    }
+    .card_body_icon {
+        
+    
+        .fa-solid {
+            position: relative;
+            
+            right: 55%;
+            
+            
+        }
+        
+    }
+}
