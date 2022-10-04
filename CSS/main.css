@@ -131,7 +131,7 @@ a {
 .restaurants_list .restaurants_card {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
   background-color: white;
   border-radius: 15px;
   box-shadow: 6px 5px 6px lightgray;
@@ -229,7 +229,7 @@ a {
 .card_body_icon .fa-solid {
   position: absolute;
   font-size: 20px;
-  right: 7.5%;
+  right: 8%;
   color: transparent;
 }
 .card_body_icon .fa-solid:hover {
@@ -254,6 +254,12 @@ a {
   .card_body_icon .fa-solid {
     position: relative;
     right: 55%;
+  }
+  .card_body_icon .fa-solid:hover {
+    transform: scale(1);
+    color: #9356dc;
+    transform-origin: bottom;
+    transition: all 1s ease-in-out;
   }
 }
 button {
@@ -692,6 +698,9 @@ header .image img {
 .list .entrée_plat a:hover .entrée_plat_price {
   animation: move 0.8s both;
 }
+.list .entrée_plat a:hover .entrée_plat_body {
+  animation: body 0.8s both;
+}
 .list .entrée_plat a .entrée_plat_body {
   width: 55%;
   margin-left: 10px;
@@ -711,7 +720,6 @@ header .image img {
   color: transparent;
   align-items: center;
   height: 10vh;
-  width: 10vh;
 }
 .list .plats {
   margin-bottom: 38px;
@@ -738,16 +746,19 @@ header .image img {
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
   color: white;
-  animation: slide 0.5s ease;
+  animation: slide 0.8s both;
 }
 .list .plats_menu a:hover i {
   transform: rotate(360deg);
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
   font-size: 20px;
   text-align: center;
 }
 .list .plats_menu a:hover .plats_menu_price {
   animation: move 0.8s both;
+}
+.list .plats_menu a:hover .plats_menu_body {
+  animation: body 0.8s both;
 }
 .list .plats_menu a .plats_menu_body {
   width: 55%;
@@ -768,7 +779,6 @@ header .image img {
   color: transparent;
   align-items: center;
   height: 10vh;
-  width: 10vh;
 }
 .list .desserts {
   margin-bottom: 38px;
@@ -795,16 +805,19 @@ header .image img {
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
   color: white;
-  animation: slide 0.5s ease;
+  animation: slide 0.8s both;
 }
 .list .desserts_menu a:hover i {
   transform: rotate(360deg);
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
   font-size: 20px;
   text-align: center;
 }
 .list .desserts_menu a:hover .desserts_menu_price {
   animation: move 0.8s both;
+}
+.list .desserts_menu a:hover .desserts_menu_body {
+  animation: body 0.8s both;
 }
 .list .desserts_menu a .desserts_menu_body {
   width: 55%;
@@ -825,7 +838,6 @@ header .image img {
   color: transparent;
   align-items: center;
   height: 10vh;
-  width: 10vh;
 }
 .list button {
   align-items: center;
@@ -833,14 +845,22 @@ header .image img {
   width: 200px;
 }
 
+@keyframes body {
+  0% {
+    width: 55%;
+  }
+  100% {
+    width: 40%;
+  }
+}
 @keyframes move {
   0% {
     transform: translateX(0);
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50px);
-    transform: translateX(-50px);
+    transform: translateX(-30px);
+    transform: translateX(-30px);
   }
 }
 @keyframes slide {
@@ -901,33 +921,23 @@ header .image img {
 }
 
 /*Version Desktop*/
-/*@media screen and (min-width: 1295px) {
-
-    .list_menu{
-        display: flex;
-        flex-direction: column;
-        /*flex-wrap: nowrap;*/
-/*align-items: center;
+@media screen and (min-width: 1295px) {
+  .list_menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
     justify-content: space-between;
+  }
+  .entrée {
+    width: 32%;
+  }
+  .plats {
+    width: 32%;
+  }
+  .desserts {
+    width: 32%;
+  }
 }
-.entrée{
-   /* width: 32%;*/
-/* display: flex;
-       flex-direction: row;
-       gap: 10%;
-
-    }
-    .plats {
-        display: flex;
-        flex-direction: row;
-        gap: 10%;
-
-    }
-    .desserts {
-        display: flex;
-        flex-direction: row;
-        gap: 10%;
-    }
-}*/
 
 /*# sourceMappingURL=main.css.map */

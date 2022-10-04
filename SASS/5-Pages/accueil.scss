@@ -114,7 +114,7 @@
         .restaurants_card {
             display: flex;
             flex-direction: column;
-            width: 80%;
+            width: 90%;
             background-color: white;
             border-radius: 15px;
             box-shadow: 6px 5px 6px lightgray;
@@ -233,7 +233,8 @@
     .fa-solid {
         position: absolute;
         font-size: 20px;
-        right: 7.5%;
+        right: 8%;
+        
         color: transparent;
         
         &:hover{
@@ -243,9 +244,7 @@
             transition: all 1s ease-in-out;
         }
     }
-    
 }
-
 /*Version Desktop*/
 
 @media screen and (min-width: 1200px) {
@@ -268,8 +267,12 @@
             position: relative;
             
             right: 55%;
-            
-            
+            &:hover{
+                transform: scale(1);
+                color: $color_primary;
+                transform-origin: bottom;
+                transition: all 1s ease-in-out;
+            }
         }
         
     }
