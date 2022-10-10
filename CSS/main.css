@@ -229,7 +229,7 @@ a {
 .card_body_icon .fa-solid {
   position: absolute;
   font-size: 20px;
-  right: 8%;
+  margin-left: -20px;
   color: transparent;
 }
 .card_body_icon .fa-solid:hover {
@@ -249,11 +249,7 @@ a {
     justify-content: space-around;
   }
   .restaurants_list .restaurants_card {
-    width: 45%;
-  }
-  .card_body_icon .fa-solid {
-    position: relative;
-    right: 55%;
+    width: 46%;
   }
   .card_body_icon .fa-solid:hover {
     transform: scale(1);
@@ -616,7 +612,6 @@ header .top {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
   margin: 18px 10px;
 }
 header .top img {
