@@ -676,11 +676,6 @@ header .image img {
   gap: 10px;
   box-shadow: 5px 5px 10px #e7e7e7;
 }
-.list .entrée_plat a:hover {
-  /*.entrée_plat_price {
-      animation: move 0.8s both;
-  }*/
-}
 .list .entrée_plat a:hover .entrée_plat_slide {
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
@@ -736,11 +731,6 @@ header .image img {
   /*gap: 20px; mettre des gap dans le display flex */
   gap: 10px;
   box-shadow: 5px 5px 10px #e7e7e7;
-}
-.list .plats_menu a:hover {
-  /*.plats_menu_price{
-      animation: move 0.8s both;
-  }*/
 }
 .list .plats_menu a:hover .plats_menu_slide {
   background-color: #99e2d0;
@@ -798,11 +788,6 @@ header .image img {
   gap: 10px;
   box-shadow: 5px 5px 10px #e7e7e7;
 }
-.list .desserts_menu a:hover {
-  /*.desserts_menu_price{
-      animation: move 0.8s both;
-  }*/
-}
 .list .desserts_menu a:hover .desserts_menu_slide {
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
@@ -852,16 +837,6 @@ header .image img {
     width: 40%;
   }
 }
-/*@keyframes move {
-    0% {
-        transform: translateX(0);
-        transform: translateX(0);
-      }
-    100% {
-        transform: translateX(-30px);
-        transform: translateX(-30px);
-    }
-}*/
 @keyframes slide {
   0% {
     width: 0vh;
