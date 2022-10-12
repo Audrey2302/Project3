@@ -168,7 +168,6 @@
 
 /* Mettre un loading spinner au demmarage de la page d'accueil ! */
 
-
 .loading_spinner {
     position: fixed; /*Fixé sur le texte*/
     display: flex;
@@ -179,7 +178,6 @@
     opacity: 0.9;
     z-index: 1;
     animation: opacity 3s forwards;
-     /*Comment faire pour cachez la div au bout de quelque seconde*/
 }
 
 .loading_spinner i {

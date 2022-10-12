@@ -56,15 +56,12 @@ header .image img{
     }
 
     .entrée {
-        
         margin-bottom: 38px;
-
         &_plat {
             display: flex;
             height: 100%;
             flex-direction: column;
             gap: 20px;
-
             a {
                 display: flex;
                 height: 100%;
@@ -72,11 +69,8 @@ header .image img{
                 align-items: center;
                 background-color: white;
                 border-radius: 20px;
-                /*overflow: hidden; */
-                /*gap: 20px; mettre des gap dans le display flex */
                 gap: 10px;
                 box-shadow: 5px 5px 10px #e7e7e7;
-
                 &:hover  {
                     .entrée_plat_slide{
                         background-color: $color_tertiary;
@@ -87,13 +81,12 @@ header .image img{
                     i{
                         transform: rotate(360deg);
                         transition: transform 1s ease;
-                        
                         font-size: 20px;
                         text-align: center;
                     }
-                    .entrée_plat_price {
+                    /*.entrée_plat_price {
                         animation: move 0.8s both;
-                    }
+                    }*/
                     .entrée_plat_body {
                         animation: body 0.8s both;
                     }
@@ -165,9 +158,9 @@ header .image img{
                         font-size: 20px;
                         text-align: center;
                     }
-                    .plats_menu_price{
+                    /*.plats_menu_price{
                         animation: move 0.8s both;
-                    }
+                    }*/
                     .plats_menu_body {
                         animation: body 0.8s both;
                     }
@@ -237,9 +230,9 @@ header .image img{
                         font-size: 20px;
                         text-align: center;
                     }
-                    .desserts_menu_price{
+                    /*.desserts_menu_price{
                         animation: move 0.8s both;
-                    }
+                    }*/
                     .desserts_menu_body {
                         animation: body 0.8s both;
                     }
@@ -290,7 +283,7 @@ header .image img{
         width: 40%;
     }
 }
-@keyframes move {
+/*@keyframes move {
     0% {
         transform: translateX(0);
         transform: translateX(0);
@@ -299,7 +292,7 @@ header .image img{
         transform: translateX(-30px);
         transform: translateX(-30px);
     }
-}
+}*/
 @keyframes slide{
     0% {
         width: 0vh;
@@ -314,46 +307,51 @@ header .image img{
 @keyframes apparition {
     0% {
         opacity: 0;
+        transform: translateY(20px);
+        transform: translateY(20px);
         
     }
     100% {
         opacity: 1;
+        transform: translateY(0);
+        transform: translateY(0);
         
     }
 }
+
 .one{
     animation: apparition 1s forwards;
-
+    
 }
 .two {
-    animation: apparition 1.4s forwards;
+    animation: apparition 2s forwards;
 }
 .three {
-    animation: apparition 1.8s forwards;
+    animation: apparition 3s forwards;
 }
 .four {
-    animation: apparition 2.2s forwards;
+    animation: apparition 4s forwards;
 
 }
 .five{
-    animation: apparition 2.6s forwards;
+    animation: apparition 5s forwards;
 
 }
 .six{
-    animation: apparition 3s forwards;
+    animation: apparition 6s forwards;
 
 }
 .seven{
-    animation: apparition 3.4s forwards;
+    animation: apparition 7s forwards;
 }
 .eight{
-    animation: apparition 3.8s forwards;
+    animation: apparition 8s forwards;
 }
 .nine{
-    animation: apparition 4.2s forwards;
+    animation: apparition 9s forwards;
 }
 .ten {
-    animation: apparition 4.6s forwards;
+    animation: apparition 10s forwards;
 }
 
 /*Version Desktop*/

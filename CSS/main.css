@@ -182,7 +182,6 @@ a {
   opacity: 0.9;
   z-index: 1;
   animation: opacity 3s forwards;
-  /*Comment faire pour cachez la div au bout de quelque seconde*/
 }
 
 .loading_spinner i {
@@ -674,10 +673,13 @@ header .image img {
   align-items: center;
   background-color: white;
   border-radius: 20px;
-  /*overflow: hidden; */
-  /*gap: 20px; mettre des gap dans le display flex */
   gap: 10px;
   box-shadow: 5px 5px 10px #e7e7e7;
+}
+.list .entrée_plat a:hover {
+  /*.entrée_plat_price {
+      animation: move 0.8s both;
+  }*/
 }
 .list .entrée_plat a:hover .entrée_plat_slide {
   background-color: #99e2d0;
@@ -690,9 +692,6 @@ header .image img {
   transition: transform 1s ease;
   font-size: 20px;
   text-align: center;
-}
-.list .entrée_plat a:hover .entrée_plat_price {
-  animation: move 0.8s both;
 }
 .list .entrée_plat a:hover .entrée_plat_body {
   animation: body 0.8s both;
@@ -738,6 +737,11 @@ header .image img {
   gap: 10px;
   box-shadow: 5px 5px 10px #e7e7e7;
 }
+.list .plats_menu a:hover {
+  /*.plats_menu_price{
+      animation: move 0.8s both;
+  }*/
+}
 .list .plats_menu a:hover .plats_menu_slide {
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
@@ -749,9 +753,6 @@ header .image img {
   transition: transform 1s ease;
   font-size: 20px;
   text-align: center;
-}
-.list .plats_menu a:hover .plats_menu_price {
-  animation: move 0.8s both;
 }
 .list .plats_menu a:hover .plats_menu_body {
   animation: body 0.8s both;
@@ -797,6 +798,11 @@ header .image img {
   gap: 10px;
   box-shadow: 5px 5px 10px #e7e7e7;
 }
+.list .desserts_menu a:hover {
+  /*.desserts_menu_price{
+      animation: move 0.8s both;
+  }*/
+}
 .list .desserts_menu a:hover .desserts_menu_slide {
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
@@ -808,9 +814,6 @@ header .image img {
   transition: transform 1s ease;
   font-size: 20px;
   text-align: center;
-}
-.list .desserts_menu a:hover .desserts_menu_price {
-  animation: move 0.8s both;
 }
 .list .desserts_menu a:hover .desserts_menu_body {
   animation: body 0.8s both;
@@ -849,16 +852,16 @@ header .image img {
     width: 40%;
   }
 }
-@keyframes move {
-  0% {
-    transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-30px);
-    transform: translateX(-30px);
-  }
-}
+/*@keyframes move {
+    0% {
+        transform: translateX(0);
+        transform: translateX(0);
+      }
+    100% {
+        transform: translateX(-30px);
+        transform: translateX(-30px);
+    }
+}*/
 @keyframes slide {
   0% {
     width: 0vh;
@@ -871,9 +874,13 @@ header .image img {
 @keyframes apparition {
   0% {
     opacity: 0;
+    transform: translateY(20px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
+    transform: translateY(0);
   }
 }
 .one {
@@ -881,39 +888,39 @@ header .image img {
 }
 
 .two {
-  animation: apparition 1.4s forwards;
+  animation: apparition 2s forwards;
 }
 
 .three {
-  animation: apparition 1.8s forwards;
-}
-
-.four {
-  animation: apparition 2.2s forwards;
-}
-
-.five {
-  animation: apparition 2.6s forwards;
-}
-
-.six {
   animation: apparition 3s forwards;
 }
 
+.four {
+  animation: apparition 4s forwards;
+}
+
+.five {
+  animation: apparition 5s forwards;
+}
+
+.six {
+  animation: apparition 6s forwards;
+}
+
 .seven {
-  animation: apparition 3.4s forwards;
+  animation: apparition 7s forwards;
 }
 
 .eight {
-  animation: apparition 3.8s forwards;
+  animation: apparition 8s forwards;
 }
 
 .nine {
-  animation: apparition 4.2s forwards;
+  animation: apparition 9s forwards;
 }
 
 .ten {
-  animation: apparition 4.6s forwards;
+  animation: apparition 10s forwards;
 }
 
 /*Version Desktop*/
